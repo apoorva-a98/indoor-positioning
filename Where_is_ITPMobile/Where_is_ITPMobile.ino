@@ -82,12 +82,13 @@ void loop() {
     return;
   }
 
-  digitalWrite(LED_BUILTIN, HIGH);
   // if not connected to the broker, try to connect:
   if (!mqttClient.connected()) {
+    digitalWrite(LED_BUILTIN, LOW);
     Serial.println("attempting to connect to broker");
     connectToBroker();
   }
+  digitalWrite(LED_BUILTIN, HIGH);
   // poll for new messages from the broker:
   mqttClient.poll();
 

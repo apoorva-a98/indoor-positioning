@@ -23,10 +23,10 @@
 
 //////// shiftr.io, requires username and password 
 // (see options variable below):
-// const broker = 'wss://public.cloud.shiftr.io';
+const broker = 'wss://public.cloud.shiftr.io';
 
 //////// test.mosquitto.org, uses no username and password:
-const broker = 'wss://test.mosquitto.org:8081';
+// const broker = 'wss://test.mosquitto.org:8081';
 
 // MQTT client:
 let client;
@@ -36,10 +36,12 @@ let options = {
   // Clean session
   clean: true,
   // connect timeout in ms:
-  connectTimeout: 10000,
+  connectTimeout: 60000,
   // Authentication
-  clientId: 'mqttJsClient',
+  clientId: 'hahahahh',
   // add these in for public.cloud.shiftr.io:
+  username: 'public',
+  password: 'public'
 //    
 }
 // topic to subscribe to when you connect:
